@@ -37,36 +37,47 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form onsubmit="return false">
                         <div class="form-group">
                             <label>Nombre</label>
-                            <input type="text" class="form-control" placeholder="Nombre" required>
+                            <input type="text" id="nombreVecino" class="form-control" placeholder="Nombre" required>
                         </div>
                         <div class="form-group">
                             <label>Apellido</label>
-                            <input type="text" class="form-control" placeholder="Apellido" required>
+                            <input type="text" id="apellidoVecino" class="form-control" placeholder="Apellido" required>
                         </div>
                         <div class="form-group">
                             <label>CUIT</label>
-                            <input type="text" class="form-control" placeholder="CUIT" required>
+                            <input type="text" id="cuitVecino" class="form-control" placeholder="CUIT" required>
                         </div>
                         <div class="form-group">
                             <label>Domicilio</label>
-                            <input type="text" class="form-control" placeholder="Domicilio" required>
+                            <input type="text" id="domicilioVecino" class="form-control" placeholder="Domicilio" required>
                         </div>
                         <div class="form-group">
                             <label>Localidad</label>
-                            <input type="text" class="form-control" placeholder="Localidad" required>
+                            <input type="text" id="localidadVecino" class="form-control" placeholder="Localidad" required>
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Email" required>
+                            <input type="email" id="emailVecino" class="form-control" placeholder="Email" required>
                         </div>
                         <div class="form-group">
                             <label>Contraseña</label>
-                            <input type="password" class="form-control" placeholder="Contraseña" required>
+                            <input type="password" id="contrasenia" class="form-control" placeholder="Contraseña" required>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Registrarse</button>
+                        <div class="form-group">
+                            <label>Repetir Contraseña</label>
+                            <input type="password" id="contraseniaControl" class="form-control" placeholder="Contraseña" required>
+                        </div>
+                        <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show" id="alertaDatosIncompletos" style="display: none;">
+                            <span class="badge badge-pill badge-danger">Error</span>
+                            Datos incompletos
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <a id="registrarVecino" onclick="registrarVecino()"><button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30" >Registrarse </button></a> 
                         <div class="register-link m-t-15 text-center">
                             <p>Ya tienes una cuenta ? <a href="index.html"> Iniciar Sesion</a></p>
                         </div>
@@ -81,6 +92,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script src="appCiudadana.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>
