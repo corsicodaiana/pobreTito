@@ -1,0 +1,1 @@
+<p>Para ver la documentación, se puede ver <a href = "https://docs.google.com/document/d/1B1rmjLlUwEYIIwx514RIa1a3_o6uSoT7UV6Q9qkVtmg/edit?usp=sharing">link</a>.</p>
