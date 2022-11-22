@@ -1,6 +1,6 @@
 <?php
 require_once("modelo/modeloClass.php");
-class vecinoController{
+class requerimientoController{
 	private $model;
 	function __construct(){
         $this->model=new Modelo();
@@ -9,7 +9,7 @@ class vecinoController{
     function guardar(){
     	$idRequerimiento 	=	$_REQUEST['idRequerimiento'];
     	$cuit 	=	$_REQUEST['cuit'];
-    	$idMotivo 	=	$_REQUEST['idMptivo'];
+    	$idMotivo 	=	$_REQUEST['idMotivo'];
     	$idSubmotivo 	=	$_REQUEST['idSubmotivo'];
     	$urlFoto 	=	$_REQUEST['urlFoto'];
     	$observacion 	=	$_REQUEST['observacion'];

@@ -107,7 +107,8 @@
                             <div class="row form-group">
                                 <div class="col col-md-3"><label class=" form-control-label">Vecino</label></div>
                                 <div class="col-12 col-md-9">
-                                    <p class="form-control-static" id="datosVecino">CUIT - Nombre Completo</p>
+                                    <input type="hidden" id="cuitVecino" class="form-control" value="">
+                                    <p class="form-control-static" id="datosVecino"></p>
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -148,8 +149,15 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show" id="alertaDatosIncompletos" style="display: none;">
+                                <span class="badge badge-pill badge-danger">Error</span>
+                                Datos incompletos
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-sm">
+                        <button class="btn btn-primary btn-sm" onclick="guardarRequerimiento();">
                             <i class="fa fa-dot-circle-o"></i> Guardar
                         </button>
                         <button type="reset" class="btn btn-danger btn-sm">
@@ -207,6 +215,9 @@
     <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
     <script src="assets/js/init/fullcalendar-init.js"></script>
+
+    <script src="appCiudadana.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!--Local Stuff-->
     <script>

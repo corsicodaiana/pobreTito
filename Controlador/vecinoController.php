@@ -18,10 +18,24 @@ class vecinoController{
     	$domicilio 	=	$_REQUEST['domicilio'];
     	$localidad 	=	$_REQUEST['localidad'];
     	$email 	=	$_REQUEST['email'];
-    	$contrasenia 	=	$_REQUEST['contraseña'];
+    	$contrasenia 	=	$_REQUEST['contrasenia'];
         $data       =   "'".$cuit."','".$nombre."','".$domicilio."','".$localidad."','".$email."','".$contrasenia."'";
     	$vecino 	=	new Modelo();
 		$dato 		=	$vecino->insertar("vecino",$data);
 		header("location:http://localhost:8080/pobretito/Vista/");
+    }
+
+	function iniciarSesion($cuit,$contrasenia){
+    	$vecino 	=	new Modelo();
+		$dato=$vecino->mostrar("vecino","cuit = ".$cuit);
+		if($dato){
+			if($dato['contraseña'] == $contrasenia){
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+			return false;
+		}
     }
 }
